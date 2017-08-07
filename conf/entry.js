@@ -43,7 +43,6 @@ registerModule(new DiscardModule())
 
 export function createMap (target, clientConf = defaultClientConf, layerConf = defaultLayerConf) {
   return createMapInternal(target, clientConf, layerConf).then(map => {
-
     // A function that sets all confirm/discard buttons (both mobile and desktop) active/inactive
     // For demo purposes only
     let setButtonsActive = (active) => {
