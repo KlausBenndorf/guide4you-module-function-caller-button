@@ -1,0 +1,173 @@
+{
+  "proxy": "{{{ajaxProxy}}}",
+  "languageSettings": {
+    "currentLanguage": "de",
+    "defaultLanguage": "de",
+    "availableLanguages": ["en", "de"],
+    "languageFile": "{{{languageFile}}}"
+  },
+  "mapProjection": "EPSG:3857",
+  "interfaceProjection": "EPSG:4326",
+  "loadingStrategy": "ALL",
+  "view": {
+    "center": [7.445115, 51.523468],    
+    "zoom": 17,
+    "minZoom": 8,
+    "maxZoom": 20
+  },
+  "scaleIcons": 1,
+  "mobileLayout": {
+    "mediaQueries": [
+      "(max-width: 736px)"
+    ],
+    "scaleIcons": 1.4,
+    "animations": false
+  },
+  "additionalProjections": [
+    {
+      "code": "EPSG:25832",
+      "definition": "+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
+    }
+  ],
+  "featurePopup": {
+    "centerOnPopup": true,
+    "offset": [
+      0,
+      -20
+    ],
+    "positioning": "bottom-center",
+    "iconSizedOffset": [
+      0,
+      -1
+    ],
+    "animated": true
+  },
+  "featureTooltip": {
+    "positioning": "top-left",
+    "offset": [
+      10,
+      20
+    ]
+  },
+  "interactions": {
+    "doubleClickZoom": true,
+    "dragPan": true,
+    "keyboardPan": true,
+    "keyboardZoom": true,
+    "mouseWheelZoom": true,
+    "pinchZoom": true,
+    "dragRotate": true,
+    "pinchRotate": true
+  },
+  "move": {
+    "animationDuration": 2000,
+    "pixelPadding": 60,
+    "meterMinSize": 300
+  },
+  "positioning": {
+    "padding": 5,
+    "spacing": 10
+  },
+  "controls": {
+    "onMap": [
+      "arrowButtons",
+      "attribution",
+      "scaleLine",
+      "zoom",
+      "mobileControls",
+      "toolbox"
+    ],
+    "toolbox": {
+      "contains": [
+        "confirmButton",
+        "discardButton"
+      ],
+      "float": [
+        "top",
+        "right"
+      ]
+    },
+    "mobileControls": {
+      "float": "fixed",
+      "contains": [
+        "confirmButton",
+        "discardButton"
+      ]
+    },
+    "arrowButtons": {
+      "float": [
+        "top",
+        "left"
+      ]
+    },
+    "helpButton": {
+      "fileName": "files/helptext.json"
+    },
+    "scaleLine": {
+      "float": [
+        "left",
+        "bottom"
+      ]
+    },
+    "zoom": {
+      "slider": true,
+      "buttons": true,
+      "float": [
+        "left",
+        "top"
+      ]
+    },
+    "attribution": {
+      "float": [
+        "left",
+        "bottom"
+      ],
+      "importance": 99,
+      "collapsible": true
+    },
+    "confirmButton": true,
+    "discardButton": true
+  },
+  "styleMap": {
+    "#defaultStyle": {
+      "image": {
+        "type": "circle",
+        "radius": 7.5,
+        "fill": {
+          "color": "rgba( 0, 113, 188, 0.3)"
+        },
+        "stroke": {
+          "color": "rgba( 46, 49, 146, 0.8)",
+          "width": 2
+        }
+      },
+      "stroke": {
+        "color": "rgba( 46, 49, 146, 0.8)",
+        "width": 2
+      },
+      "fill": {
+        "color": "rgba( 0, 113, 188, 0.3)"
+      }
+    },
+    "#editStyle": {
+      "image": {
+        "type": "circle",
+        "radius": 7.5,
+        "fill": {
+          "color": "rgba( 255, 0, 0, 0.3)"
+        },
+        "stroke": {
+          "color": "rgba( 192, 0, 0, 0.8)",
+          "width": 2
+        }
+      },
+      "stroke": {
+        "color": "rgba( 192, 0, 0, 0.8)",
+        "width": 2
+      },
+      "fill": {
+        "color": "rgba( 255, 0, 0, 0.3)"
+      }
+    }
+  }
+}

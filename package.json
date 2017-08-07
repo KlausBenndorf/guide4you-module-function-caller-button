@@ -1,0 +1,65 @@
+{
+  "name": "guide4you-module-function-caller-button",
+  "version": "1.0.0",
+  "description": "A generic button that calls an (argumentless) function",
+  "keywords": [
+    "map",
+    "map client",
+    "openlayers"
+  ],
+  "author": "Klaus Benndorf",
+  "homepage": "https://github.com/KlausBenndorf/guide4you",
+  "license": "MIT",
+  "contributors": [
+    "Josef Schugt <josef.schugt@benndorf.de>",
+    "Simon Seyock <simonseyock@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KlausBenndorf/guide4you-module-function-caller-button"
+  },
+  "peerDependencies": {
+    "guide4you": "2.1.*",
+    "jquery": "3.2.1",
+    "openlayers": "github:KlausBenndorf/ol3#g4u3_v4.1.0"
+  },
+  "dependencies": {
+    "csscolorparser": "1.0.3",
+    "iscroll": "5.2.0",
+    "lodash": "4.17.4",
+    "notifyjs-browser": "0.4.2",
+    "proj4": "^2.4.3",
+    "strip-json-comments": "2.0.1"
+  },
+  "devDependencies": {
+    "guide4you": "2.1.*",
+    "jquery": "3.2.1",
+    "openlayers": "github:KlausBenndorf/ol3#g4u3_v4.1.0",
+    "guide4you-proxy": "github:KlausBenndorf/guide4you-proxy#v1.0.0",
+    "concurrently": "^3.4.0",
+    "esdoc": "1.0.0-alpha.3",
+    "guide4you-builder": "~2.0.6",
+    "http-server": "^0.10.0",
+    "mocha": "3.4.2",
+    "phantomjs-prebuilt": "2.1.14",
+    "selenium-webdriver": "3.4.0",
+    "standard": "10.0.2",
+    "wait-on": "^2.0.2"
+  },
+  "scripts": {
+    "linkRepos": "g4u-link guide4you",
+    "unlinkRepos": "g4u-unlink guide4you",
+    "build": "g4u-build -m prod -c",
+    "debugBuild": "g4u-build -d -m prod -c",
+    "dev": "g4u-build -m dev -c",
+    "lint": "eslint src/ tests/",
+    "version": "npm run test && git add -A && git commit --amend --no-edit",
+    "buildTests": "concurrently \"g4u-buildTests\" \"npm run dist\"",
+    "runTests": "wait-on -l http-get://localhost:8089 && mocha build/tests/*",
+    "test": "npm run lint && npm run buildTests && concurrently --kill-others --success first \"http-server ./ -p 8089 -s\" \"npm run runTests\" && echo \"Tests completed successfully\"",
+    "doc": "esdoc -c esdoc.json"
+  },
+  "main": "./dist/g4u.js",
+  "module": "./config/dist/entry.js",
+  "types": "./dist/g4u.d.ts"
+}

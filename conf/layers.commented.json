@@ -1,0 +1,23 @@
+{
+  "baseLayers": [
+    {
+      "id": "b1",
+      "title": {
+        "en": "Roads",
+        "de": "Stra&szlig;en"
+      },
+      "type": "OSM",
+      "source": {
+        "url": "https://tileserver.benndorf.de/default/{z}/{x}/{y}.png",
+        "attribution": {
+          "en": "&copy; <a href=\"http://www.openstreetmap.org/copyright\" target=\"_blank\">OpenStreetMap</a> contributors",
+          "de": "&copy; <a href=\"http://www.openstreetmap.org/copyright\" target=\"_blank\">OpenStreetMap</a> Mitwirkende"
+        }
+      },
+      "visible": true
+    }
+  ],
+  "featureLayers": [ ],
+  "fixedFeatureLayers": [
+  ]
+}

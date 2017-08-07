@@ -1,0 +1,31 @@
+@import "~guide4you/less/lengths";
+@import "~guide4you/less/controlgenerics";
+@import "~guide4you/less/tooltip.less";
+@import "~guide4you/less/colors";
+
+@g4u-discardbutton: url("~mustache-eval-loader?name=images/[name].[ext]!../images/icons/discard.svg");
+@g4u-discardbutton-disabled: url("~mustache-eval-loader?name=images/[name].[ext]!../images/icons/discard-disabled.svg");
+
+.g4u-desktop {
+  .g4u-discardbutton {
+    &.g4u-control-mainbutton {
+      .buttonSquaredWithIcon(@g4u-discardbutton; @g4u-desktop-button-size; @g4u-desktop-huge-fontsize);
+      .g4u-tooltip-left-below();
+      &.g4u-discardbutton-disabled {
+        .changeIcon(@g4u-discardbutton-disabled);
+      }
+    }
+  }
+}
+
+.g4u-mobile {
+  .g4u-discardbutton {
+    &.g4u-control-mainbutton {
+      .buttonSquaredWithIcon(@g4u-discardbutton; @g4u-mobile-button-size; @g4u-mobile-huge-fontsize);
+      .g4u-tooltip-left-below();
+      &.g4u-discardbutton-disabled {
+        .changeIcon(@g4u-discardbutton-disabled);
+      }
+    }
+  }
+}

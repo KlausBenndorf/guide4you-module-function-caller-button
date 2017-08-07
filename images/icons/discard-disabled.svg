@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1400 1400">
+  <line x1="280" y1="280" x2="1120" y2="1120" style="stroke:{{{svgColor}}};stroke-opacity:0.3;stroke-width:280;stroke-linecap:round;" />
+  <line x1="280" y1="1120" x2="1120" y2="280" style="stroke:{{{svgColor}}};stroke-opacity:0.3;stroke-width:280;stroke-linecap:round;" />
+</svg>
