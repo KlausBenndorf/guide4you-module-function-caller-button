@@ -1,14 +1,14 @@
 'use strict'
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const mustacheEvalLoader = require('guide4you-builder/mustache-eval-loader')
+const mustacheLoader = require('guide4you-builder/mustache-loader')
 const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 let path = require('path')
 let baseDir = process.cwd()
 
-mustacheEvalLoader.setTemplateVars({
+mustacheLoader.setTemplateVars({
   ajaxProxy: {
     prod: 'proxy/proxy.php?csurl={url}',
     dev: '/proxy/{url}'
@@ -21,7 +21,8 @@ mustacheEvalLoader.setTemplateVars({
   proxyValidRequests: [
     'a.tile.openstreetmap.org',
     'b.tile.openstreetmap.org',
-    'c.tile.openstreetmap.org'
+    'c.tile.openstreetmap.org',
+    'tileserver.benndorf.de'
   ]
 })
 

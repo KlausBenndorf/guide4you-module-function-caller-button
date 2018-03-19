@@ -8,7 +8,10 @@
       },
       "type": "OSM",
       "source": {
-        "url": "https://tileserver.benndorf.de/default/{z}/{x}/{y}.png",
+        "url": {
+          "url": "http://tileserver.benndorf.de/default/{z}/{x}/{y}.png",
+          "useProxy": true
+        },
         "attribution": {
           "en": "&copy; <a href=\"http://www.openstreetmap.org/copyright\" target=\"_blank\">OpenStreetMap</a> contributors",
           "de": "&copy; <a href=\"http://www.openstreetmap.org/copyright\" target=\"_blank\">OpenStreetMap</a> Mitwirkende"

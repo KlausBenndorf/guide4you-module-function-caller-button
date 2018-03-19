@@ -3,8 +3,8 @@
 @import "~guide4you/less/tooltip.less";
 @import "~guide4you/less/colors";
 
-@g4u-discardbutton: url("~mustache-eval-loader?name=images/[name].[ext]!../images/icons/discard.svg");
-@g4u-discardbutton-disabled: url("~mustache-eval-loader?name=images/[name].[ext]!../images/icons/discard-disabled.svg");
+@g4u-discardbutton: url("~file-loader?name=images/[name].[ext]!mustache-loader!../images/icons/discard.svg");
+@g4u-discardbutton-disabled: url("~file-loader?name=images/[name].[ext]!mustache-loader!../images/icons/discard-disabled.svg");
 
 .g4u-desktop {
   .g4u-discardbutton {
